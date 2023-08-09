@@ -22,7 +22,8 @@ class Diseases:
 
         # Load model
         self.model = tf.keras.models.load_model("diseases13_1/1/model.savedmodel")
-        print(self.model.summary())
+        # print(self.model.summary())
+        print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
         print("Diseases init")
 
     def predict(self, img: np.ndarray):
